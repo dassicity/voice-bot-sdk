@@ -49,7 +49,7 @@ This SDK allows developers to focus on creating applications without worrying ab
 
    ```bash
    git clone
-   cd voice_bot_sdk
+   cd voice-bot-sdk
    ```
 
 2. **Create a Virtual Environment** (Recommended)
