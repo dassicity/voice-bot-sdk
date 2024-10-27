@@ -26,7 +26,6 @@ This SDK allows developers to focus on creating applications without worrying ab
   - [Starting the Conversation](#starting-the-conversation)
 - [Assumptions](#assumptions)
 - [Example Application](#example-application)
-- [Tourbleshooting](#troubleshooting)
 - [Additional Notes](#additional-notes)
 
 
@@ -186,10 +185,6 @@ This script will:
 
 ## Assumptions
 
-- **OpenAI TTS Service Availability**: The code assumes that OpenAI provides a TTS service accessible via their Python library. As of the last update, OpenAI does not publicly offer a TTS API. You may need to replace this with another TTS provider or update the SDK accordingly.
-
-- **OpenAI Library Usage**: The code uses `from openai import OpenAI` and initializes `OpenAI(api_key=...)`. Ensure that this aligns with the actual OpenAI library you're using. The standard OpenAI library is typically imported using `import openai` and used with `openai.api_key = ...`.
-
 - **API Rate Limits**: Be aware of any rate limits or usage policies associated with the Deepgram and OpenAI APIs.
 
 - **Audio Compatibility**: The recording, STT, TTS, and playback all use compatible audio formats (e.g., sample rate, channels, bit depth).
@@ -217,34 +212,6 @@ The `cli.py` file is an example application demonstrating how to use the VoiceBo
 ```bash
 python cli.py
 ```
-
----
-
-## Troubleshooting
-
-- **PyAudio Installation Issues**:
-
-  - **Windows**: Use the precompiled PyAudio wheels as mentioned in the installation section.
-  - **macOS/Linux**: Ensure PortAudio is installed before installing PyAudio.
-
-- **API Key Errors**:
-
-  - Ensure your `.env` file is correctly set up and that the API keys are valid.
-  - Check for typos or missing keys in the `.env` file.
-
-- **Module Import Errors**:
-
-  - Verify that all required packages are installed in your Python environment.
-  - Use `pip list` to check installed packages.
-
-- **OpenAI API Errors**:
-
-  - Ensure you're using the correct API endpoints and methods.
-  - Verify that your OpenAI API key has the necessary permissions.
-
-- **Deepgram API Errors**:
-
-  - Ensure your Deepgram API key is valid and has access to the necessary models.
 
 ---
 
